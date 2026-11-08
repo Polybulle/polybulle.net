@@ -1,0 +1,24 @@
+base_url = "https://polybulle.net"
+title = "Polybulle"
+description = "Notes on verification, programming languages, and whatever else computes."
+default_language = "en"
+author = "Hector Suzanne"
+compile_sass = false
+build_search_index = false
+
+# Atom feed at /atom.xml, every post included.
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+external_links_no_referrer = true
+
+[markdown.highlighting]
+error_on_missing_language = true
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[extra]
+homepage = "https://hectorsuzanne.com"

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%- set posts = get_section(path="posts/_index.md") -%}
+<ol class="index">
+{% for p in posts.pages %}
+<li>
+<time datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}</time>
+<a href="{{ p.permalink | safe }}">{{ p.title }}</a>
+{% if p.description %}<p>{{ p.description }}</p>{% endif %}
+</li>
+{% else %}
+<li class="empty">Nothing yet.</li>
+{% endfor %}
+</ol>
+{% endblock content %}

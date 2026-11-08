@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+<meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+<link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) | safe }}">
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">
+<link rel="me" href="https://mathstodon.xyz/@polybulle">
+{%- block head %}{% endblock head %}
+</head>
+<body>
+<header id="mast">
+<a class="name" href="{{ config.base_url | safe }}/">{{ config.title | lower }}</a>
+<nav>
+<a href="{{ config.extra.homepage }}">About</a>
+<a href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">Feed</a>
+</nav>
+</header>
+<main>
+{% block content %}{% endblock content %}
+</main>
+</body>
+</html>
