@@ -68,7 +68,7 @@ article .katex { font-size: 1.09em; }
 /* Masthead: /home/polybulle on the left, links on the right */
 #mast { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3.5rem; font-size: 0.95rem; }
 #mast a { text-decoration: none; }
-#mast .name { font-family: var(--mono); font-size: 1.6rem; color: var(--ink); background: none; }
+#mast .name { font-family: var(--mono); font-size: 1.8rem; color: var(--ink); background: none; }
 #mast .name::before { content: "/home/"; color: var(--accent); }
 #mast nav a { margin-left: 1.4em; color: var(--muted); }
 #mast nav a:hover { color: var(--mark-ink); } /* beats the rule above: dark ink on the yellow box */
