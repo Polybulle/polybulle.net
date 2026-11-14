@@ -1,14 +1,14 @@
-/* Colours: light-dark(light, dark) follows the system setting. */
+/* Colours: dark only. */
 :root {
-  color-scheme: light dark;
-  --bg:      light-dark(#fbfcfe, #0f121a);
-  --ink:     light-dark(#141821, #e7eaf3);
-  --muted:   light-dark(#687088, #8a93aa);
-  --faint:   light-dark(#e3e9f7, #252b3a);  /* table rules */
-  --code-bg: light-dark(#eef2fb, #181d29);
-  --accent:  light-dark(#1a4fd6, #6f97ff);  /* resume blue: links, marks, quote bar */
+  color-scheme: dark;
+  --bg:      #0f121a;
+  --ink:     #e7eaf3;
+  --muted:   #8a93aa;
+  --faint:   #252b3a;  /* table rules */
+  --code-bg: #181d29;
+  --accent:  #6f97ff;  /* resume blue: links, marks, quote bar */
   --mark: #ffd60a;
-  --mark-ink: light-dark(#141821, #0f121a);
+  --mark-ink: #0f121a;
   --mono: ui-monospace, "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
 }
 
@@ -71,6 +71,7 @@ article .katex { font-size: 1.09em; }
 #mast .name { font-family: var(--mono); font-size: 1.6rem; color: var(--ink); background: none; }
 #mast .name::before { content: "/home/"; color: var(--accent); }
 #mast nav a { margin-left: 1.4em; color: var(--muted); }
+#mast nav a:hover { color: var(--mark-ink); } /* beats the rule above: dark ink on the yellow box */
 
 /* Post list */
 .index { list-style: none; padding: 0; }

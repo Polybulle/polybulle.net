@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) | safe }}">
 <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">
 <link rel="me" href="https://mathstodon.xyz/@polybulle">
+<link rel="icon" href="{{ get_url(path='favicon.svg') | safe }}" type="image/svg+xml">
+<link rel="icon" href="{{ get_url(path='favicon.ico') | safe }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') | safe }}">
 {%- block head %}{% endblock head %}
 </head>
 <body>
