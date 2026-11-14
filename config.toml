@@ -1,6 +1,6 @@
 base_url = "https://polybulle.net"
 title = "Polybulle"
-description = "Notes on verification, programming languages, and whatever else computes."
+description = "C'est un tout nouveau concept: ça s'appelle un \"blog\"."
 default_language = "en"
 author = "Hector Suzanne"
 compile_sass = false

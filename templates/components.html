@@ -1,0 +1,39 @@
+{#- Components usable inside posts. Each one carries its own CSS.
+
+Warning, a sentence run over with a yellow marker:
+{% <warning> %}Ce post a été écrit sous *l'influence* de plusieurs *machines*{% </warning> %}
+The two signs are added here, so the post holds only the sentence. -#}
+
+{% component warning() %}
+<p class="warning">
+    <span class="warning__content">
+        <span class="warning__icon" aria-hidden="true">⚠︎</span>
+        {{ body | trim | markdown(inline=true) | safe }}
+        <span class="warning__icon" aria-hidden="true">⚠︎</span>
+    </span>
+</p>
+
+<style>
+ .warning {
+     margin: 1.5em 0;
+     padding: 0 1.5em;
+     text-align: center;
+     font-weight: 650;
+     line-height: 1.95;
+ }
+
+ .warning__content {
+     padding: 0.45em 0.35em;
+     background: #ffd60a;
+     color: #141821;
+     -webkit-box-decoration-break: clone;
+     box-decoration-break: clone;
+ }
+
+ .warning__icon {
+     font-size: 2em;
+     vertical-align: -0.12em;
+ }
+</style>
+
+{% endcomponent warning %}
