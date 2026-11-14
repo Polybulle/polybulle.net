@@ -7,8 +7,8 @@
   --faint:   light-dark(#e3e9f7, #252b3a);  /* table rules */
   --code-bg: light-dark(#eef2fb, #181d29);
   --accent:  light-dark(#1a4fd6, #6f97ff);  /* resume blue: links, marks, quote bar */
-  --mark: #ffd60a; /* #d4ff3a;                          /* lime: hover and selection only */
-  /* --mark-ink: light-dark(#141821, #0f121a); */
+  --mark: #ffd60a;
+  --mark-ink: light-dark(#141821, #0f121a);
   --mono: ui-monospace, "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
 }
 
@@ -40,6 +40,7 @@ h3 { font-size: 1.1rem; margin: 1.6rem 0 0.5rem; }
 p, ul, ol, blockquote, pre, figure, table { margin: 0 0 1em; }
 strong { font-weight: 650; }
 mark { background: var(--mark); color: var(--mark-ink); padding: 0 0.15em; }
+::selection { background: color-mix(in srgb, var(--mark) 99%, transparent); color: var(--mark-ink); } /* 99%: WebKit dims a fully opaque selection colour */
 a { color: var(--accent); text-decoration-thickness: 0.12em; text-underline-offset: 0.18em; }
 a:hover { background: var(--mark); color: var(--mark-ink); text-decoration: none; }
 blockquote { margin-left: 0; padding-left: 1em; border-left: 3px solid var(--accent); color: var(--muted); }
